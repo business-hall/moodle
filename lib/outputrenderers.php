@@ -1118,6 +1118,9 @@ class core_renderer extends renderer_base {
     public function home_link() {
         global $CFG, $SITE;
 
+        return '<div class="homelink"><a href="' . $CFG->wwwroot . '/">' .
+                    get_string('home') . '</a></div>';
+                    
         if ($this->page->pagetype == 'site-index') {
             // Special case for site home page - please do not remove
             return '<div class="sitelink">' .
